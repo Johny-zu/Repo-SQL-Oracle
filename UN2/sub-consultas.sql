@@ -2,7 +2,33 @@ CONN SYSTEM/<PASSWORD>
 
 CONN HR/HR
 
-/*Comencemos con el aparteado de subconsultas en sql*/
+-- Comencemos con el aparteado de subconsultas en sql
+
+/*Selecionamos nombre de empleados donde el id sea igual al id de la del empleado*/
 SELECT FIRST_NAME, LAST_NAME FROM EMPLOYEES
 WHERE JOB_ID = (SELECT JOB_ID FROM EMPLOYEES WHERE EMPLOYEE_ID = 100);
 
+/*
+En esta consulta seleccionamos el primer nombre, apellido y salario de la tabla de 
+empleados donde el salario sea mayor que el salario de la tabla de empleados con el 
+id del trabajador 180 y ordenaremos por slario
+*/
+
+SELECT FIRST_NAME, LAST_NAME SALARY FROM EMPLOYEES
+WHERE SALARY > (SELECT SALARY FROM EMPLOYEES WHERE EMPLOYEE_ID = 180)
+ORDER BY SALARY;
+
+
+-- Doble subsconsulta
+SELECT FIRST_NAME, DEPARTMENT_ID, SALARY FROM EMPLOYEES
+WHERE DEPARTMENT_ID = (SELECT DEPARTMENT_ID FROM EMPLOYEES
+WHERE EMPLOYEE_ID = 100) AND SALARY > (SELECT SALARY FROM EMPLOYEES
+WHERE EMPLOYEE_ID = 180) ORDER BY SALARY;
+
+SELECT FIRST_NAME, JOB_ID, SALARY FROM EMPLOYEES
+WHERE SALARY = (SELECT MIN(SALARY) FROM EMPLOYEES);
+
+SELECT JOB_ID, MIN(SALARY) FROM EMPLOYEES
+GROUP BY JOB_ID
+HAVING MIN(SALARY) > (SELECT MIN(SALARY) FROM EMPLOYEES
+WHERE DEPARTMENT_ID = 60);
