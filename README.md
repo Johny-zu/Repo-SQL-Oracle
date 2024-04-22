@@ -17,3 +17,6 @@ Ademas veremos sobre vistas y uniones
  
 ## UN5
 En este apartado veremos sobre procedures, triggers, funciones y declaraciones 
+
+## HAGAMOS UNA CONEXION!!
+Ahora como tarea final haremos una conexion entre una BD y java para hacer una prueba
