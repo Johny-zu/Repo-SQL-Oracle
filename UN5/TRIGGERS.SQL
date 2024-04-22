@@ -37,7 +37,7 @@ END;
 
 UPDATE EMPLOYEES SET SALARY = 5000 WHERE EMPLOYEE_ID = 200;
 
--- TRIGER 2
+-- TRIGGER 2
 CREATE OR REPLACE TRIGGER PRINT_SALARY_CHANGES
     BEFORE DELETE OR INSERT OR UPDATE ON EMPLOYEES
     FOR EACH ROW
@@ -56,3 +56,25 @@ END;
 
 UPDATE EMPLOYEES SET SALARY = 100000 
 WHERE EMPLOYEE_ID = 200;
+
+-- seQuence 
+CREATE SEQUENCE SEQ_REGION_ID --objeto de secuencia 
+START WITH 7 -- parametro que define el valor inicial
+INCREMENT BY 1 
+NOCACHE -- No almacenara cache los valores generados de la secuencia 
+NOCYCLE; --no se reciclara una vez alcance el valor maximo
+
+-- Forma de poner en practica la secuencia 
+SELECT SEQ_REGION_ID.NEXTVAL FROM DUAL;
+
+-- TRIGGER 3
+CREATE OR REPLACE TRIGGER tr_regions
+    BEFORE INSERT ON REGIONS2
+    FOR EACH ROW
+BEGIN
+    IF :NEW.REGION2_ID IS NULL THEN
+        SELECT SEQ_REGION_ID. NEXTVAL INTO :NEW.REGION2_ID FROM DUAL;
+    END IF;
+END;
+/
+
