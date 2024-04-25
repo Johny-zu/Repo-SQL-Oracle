@@ -6,7 +6,7 @@ public class Main {
         Connection connection = OracleDatabase.getConnection();
 
         if (connection != null) {
-            System.out.println("Conexión exitosa a la base de datos Oracle");
+            System.out.println("Conexión exitosa a la base de datos ESCUELA");
 
             // Aquí puedes realizar operaciones con la base de datos
             try {

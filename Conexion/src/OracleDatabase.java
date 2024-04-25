@@ -3,7 +3,7 @@ import java.sql.DriverManager;
 import java.sql.SQLException;
 
 public class OracleDatabase {
-    private static final String url = "jdbc:oracle:thin:@localhost:1521:XE";
+    private static final String url = "jdbc:oracle:thin:@DESKTOP-43MCTE7:1521:XE";
     private static final String user = "system";
     private static final String pass = "0";
 
@@ -19,7 +19,5 @@ public class OracleDatabase {
             e.printStackTrace();
         }
         return null;
-
-
     }
 }
