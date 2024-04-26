@@ -1,0 +1,2 @@
+# Conexion exitosa
+En esta zona encontramos una conexion exitsamente echa, pero solo es eso, una conexion sin un programa a donde podamos hacer operaciones basicas de SQL, de momento esto es ver como se puede conectar y en otra haremos como hacer un programa basico para la realización sentencias basicas de SQL
