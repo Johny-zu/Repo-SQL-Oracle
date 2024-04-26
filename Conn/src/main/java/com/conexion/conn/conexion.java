@@ -1,8 +1,10 @@
+package com.conexion.conn;
+
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
 
-public class OracleDatabase {
+public class conexion {
     private static final String url = "jdbc:oracle:thin:@DESKTOP-43MCTE7:1521:XE";
     private static final String user = "system";
     private static final String pass = "0";
