@@ -7,4 +7,5 @@ module com.isb.conexionbd {
     opens com.isb.conexionbd to javafx.fxml;
     exports com.isb.conexionbd;
     exports com.isb.conexionbd.logIn;
+    exports com.isb.conexionbd.VInicio;
 }

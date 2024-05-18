@@ -1,12 +1,11 @@
-package com.isb.conexionbd.logIn;
+package com.isb.conexionbd.VInicio;
 
-import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 
 import java.net.URL;
 import java.util.ResourceBundle;
 
-public class logInController implements Initializable {
+public class InicioController implements Initializable {
 
     public void initialize(URL location, ResourceBundle resources) {}
 }
