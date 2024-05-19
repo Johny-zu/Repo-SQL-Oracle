@@ -26,13 +26,12 @@
             <VBox alignment="CENTER" prefHeight="249.0" prefWidth="358.0">
                <children>
                   <Label text="Usuario" />
-                  <TextField editable="false" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" promptText="Ingrese usuario" />
+                  <TextField fx:id="txtUsername" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onKeyTyped="#eventKey" promptText="Ingrese usuario" />
                   <Label text="Contraseña" />
-                  <TextField maxHeight="-Infinity" maxWidth="-Infinity" promptText="Ingresa contraseña" />
+                  <PasswordField fx:id="txtPass" maxHeight="-Infinity" maxWidth="-Infinity" onKeyTyped="#eventKey" promptText="Ingrese contraseña" />
                   <HBox alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="58.0" prefWidth="263.0">
                      <children>
-                        <Button mnemonicParsing="false" text="Ingresar" />
-                        <Button mnemonicParsing="false" text="Salir" />
+                        <Button fx:id="btnAceptar" mnemonicParsing="false" onMouseClicked="#eventAction" prefHeight="25.0" prefWidth="122.0" text="Ingresar" />
                      </children>
                   </HBox>
                </children>
