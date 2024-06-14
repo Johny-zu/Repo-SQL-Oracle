@@ -1,2 +1,0 @@
-# Información del código
-En esta ventana se podran ver todas las conexiones a las otras ventanas que sera necesario tener al ecceso sin tener que estar poniendo las validaciones de credenciales cada vez que abramos una nueva ventan y la conxion se estara actva, de esta manera podemos tener mayor movimiento hacia las tablas que queramos modificar en un futuro cerano.

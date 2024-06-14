@@ -1,2 +1,0 @@
-# CONEXIÓN CON PROYECTO
-En este a diferencia del otro de conexion haremos un trabajo simple donde podamos usar una conexion con un lenguaje y de esa manera hacer un codigo donde pueda conectarse a una base de datos y hacer que desde el programa puedas escribir valores y esos valores se tranfieran a la base de datos y a las ventanas correspondiente inciando desde un log in el cual hara la visualizacion de la BD como exitosa o fracaso
